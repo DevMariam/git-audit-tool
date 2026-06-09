@@ -1,0 +1,44 @@
+[1m[0;36m
+========================================
+        GIT AUDIT TOOL - v1.0
+========================================
+[0m
+  ℹ Target repo : [1m/home/damirex/devrex/git-audit-tool[0m
+  ℹ Report file : [1m/home/damirex/devrex/git-audit-tool/reports/audit-2026-06-07.txt[0m
+  ℹ Report date : [1m2026-06-07[0m
+
+## 1. Git Repository Checks
+----------------------------------------
+  Current Branch & Working Status:
+----------------------------------------
+ M audit.sh
+ M config.sh
+ M modules/git.sh
+ M modules/health.sh
+?? reports/audit-2026-06-07.txt
+
+----------------------------------------
+  Recent Git History Graph:
+----------------------------------------
+* 76e49c7 Initial commit: add git-audit-tool structure and scrips
+
+----------------------------------------
+  Stale Local Branches (14+ Days Active Threshold):
+----------------------------------------
+         ACTIVE: feature/my-git-audit (16 hours ago)
+         ACTIVE: main (16 hours ago)
+
+## 4. Repository Health Checks
+----------------------------------------
+  Repository Disk & Object Health Check:
+----------------------------------------
+  ℹ Total Git Database Size (.git): [1m204K[0m
+  ⚠ [0;33mWARN:[0m Found 1 untracked file(s) in workspace.
+  ℹ Scanning for files exceeding 50MB...
+  ✔ [0;32mPASS:[0m Storage audit passed. No oversized files found.
+
+[1m[0;36m========================================[0m
+  [0;32m✔ Audit complete.[0m
+  Report saved to: [1m/home/damirex/devrex/git-audit-tool/reports/audit-2026-06-07.txt[0m
+[1m[0;36m========================================[0m
+

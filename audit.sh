@@ -45,16 +45,16 @@ print_header() {
     echo "        GIT AUDIT TOOL - v1.0"
     echo "========================================"
     echo -e "${RESET}"
-    echo -e "  ${INFO} Target repo : ${BOLD}$REPO_PATH${RESET}"
-    echo -e "  ${INFO} Report file : ${BOLD}$REPORT_FILE${RESET}"
-    echo -e "  ${INFO} Report date : ${BOLD}$REPORT_DATE${RESET}"
+    echo -e "  ${INFO_SIGN} Target repo : ${BOLD}$REPO_PATH${RESET}"
+    echo -e "  ${INFO_SIGN} Report file : ${BOLD}$REPORT_FILE${RESET}"
+    echo -e "  ${INFO_SIGN} Report date : ${BOLD}$REPORT_DATE${RESET}"
 
 }
 
 #print footer
 print_footer() {
     echo -e "\n${BOLD}${CYAN}========================================${RESET}"
-    echo -e "  ${GREEN}${CHECK} Audit complete.${RESET}"
+    echo -e "  ${GREEN}${CHECK_MARK} Audit complete.${RESET}"
     echo -e "  Report saved to: ${BOLD}$REPORT_FILE${RESET}"
     echo -e "${BOLD}${CYAN}========================================${RESET}\n"
 }
@@ -70,13 +70,13 @@ run_audit() {
         echo "## 1. Git Repository Checks"
         run_git_checks "$repo_path"
 
-        echo ""
-        echo "## 2. Stale Branch Checks"
-        run_stale_checks "$repo_path"
+        #echo ""
+        #echo "## 2. Stale Branch Checks"
+        #run_stale_checks "$repo_path"
         
-        echo ""
-        echo "## 3. Merge & Divergence Checks"
-        run_merge_checks "$repo_path"
+        #echo ""
+        #echo "## 3. Merge & Divergence Checks"
+        #run_merge_checks "$repo_path"
 
         echo ""
         echo "## 4. Repository Health Checks"
@@ -88,7 +88,7 @@ run_audit() {
 
     # Strip ANSI color codes from the saved report for better readability
     sed -i '' 's/\x1b\[[0-9;]*m//g' "$REPORT_FILE" 2>/dev/null || true
-
+}
     #main
 
 main() {
@@ -99,7 +99,7 @@ main() {
     fi
 
     #target repo: first arg or current dir
-    REPO_PATH="${1:-$(PWD)}"
+    REPO_PATH="${1:-$(pwd)}"
 
     #Rsolve to absolute path
     REPO_PATH="$(cd "$REPO_PATH" 2>/dev/null && pwd)" || {
