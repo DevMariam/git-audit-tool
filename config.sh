@@ -4,7 +4,12 @@
 # Source  "$(dirname "$0")/config.sh"
 
 #project root
-TOOL_DIR="${TOOL_DIR:-.}"
+TOOL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+#reports directory
+REPORTS_DIR="$TOOL_DIR/reports"
+
+
 REPORT_DATE=$(date +"%Y-%m-%d")
 REPORT_FILE="$REPORTS_DIR/audit-$REPORT_DATE.txt"
 

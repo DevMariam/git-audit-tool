@@ -1,0 +1,54 @@
+[1m[0;36m
+========================================
+        GIT AUDIT TOOL - v1.0
+========================================
+[0m
+  ℹ Target repo : [1m/home/devmariam/git-audit-tool[0m
+  ℹ Report file : [1m/home/devmariam/git-audit-tool/reports/audit-2026-06-12.txt[0m
+  ℹ Report date : [1m2026-06-12[0m
+
+## 1. Git Repository Checks
+----------------------------------------
+  Current Branch & Working Status:
+----------------------------------------
+ M config.sh
+ D reports/audit-YYYY-MM-DD.txt
+?? reports/audit-2026-06-12.txt
+
+----------------------------------------
+  Recent Git History Graph:
+----------------------------------------
+*   fd95655 Merge pull request #3 from DevMariam/stale.sh
+|\  
+| * 3ca9cd5 my-second-feature
+| * 22d1da6 Add Module Work
+* |   6d1b892 Merge pull request #4 from DevMariam/patch-1
+|\ \  
+| * | cc99cc4 Define status symbols in health.sh
+* | | a8e9f55 Merge pull request #1 from Damirex25/feature/my-git-audit
+|\| | 
+| |/  
+|/|   
+| * d780ef2 feat: complete git audit and repository health modules
+|/  
+* 76e49c7 Initial commit: add git-audit-tool structure and scrips
+
+----------------------------------------
+  Stale Local Branches (14+ Days Active Threshold):
+----------------------------------------
+         ACTIVE: main (35 minutes ago)
+
+## 4. Repository Health Checks
+----------------------------------------
+  Repository Disk & Object Health Check:
+----------------------------------------
+  ℹ Total Git Database Size (.git): [1m544K[0m
+  ⚠ [0;33mWARN:[0m Found 1 untracked file(s) in workspace.
+  ℹ Scanning for files exceeding 50MB...
+  ✔ [0;32mPASS:[0m Storage audit passed. No oversized files found.
+
+[1m[0;36m========================================[0m
+  [0;32m✔ Audit complete.[0m
+  Report saved to: [1m/home/devmariam/git-audit-tool/reports/audit-2026-06-12.txt[0m
+[1m[0;36m========================================[0m
+
