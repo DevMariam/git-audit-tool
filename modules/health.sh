@@ -5,6 +5,11 @@
 # Description: Modular Repository Storage and Object Health Check
 # ==============================================================================
 
+INFO_SIGN="ℹ"
+WARNING_SIGN="⚠"
+CHECK_MARK="✔"
+FAILED_SIGN="✘"
+
 run_health_checks() {
     local target_repo="${1:-$(pwd)}"
     
